@@ -1,2 +1,2 @@
-# Neovim config
-[][!assets/neovim_config.png]
+# Customized Neovim w/LSP
+![](assets/neovim_config.png)
