@@ -4,10 +4,22 @@ local nvim_lsp = require('lspconfig')
 DATA_PATH = vim.fn.stdpath "data"
 
 nvim_lsp["cpp"].setup{on_attach = on_attach}
+nvim_lsp["rust"].setup{on_attach = on_attach}
 nvim_lsp["python"].setup{on_attach = on_attach}
 nvim_lsp["html"].setup{on_attach = on_attach}
 nvim_lsp["css"].setup{on_attach = on_attach}
 nvim_lsp["cmake"].setup{on_attach = on_attach}
+nvim_lsp["rust"].setup{
+    on_attach = on_attach,
+    cmd = {
+        DATA_PATH .. "/lspinstall/typescript/node_modules/.bin/typescript-language-server",
+        "--stdio"
+    },
+    filetypes = {
+        "rust"
+    },
+    root_dir = function() return vim.loop.cwd() end
+}
 nvim_lsp["tsserver"].setup{
     on_attach = on_attach,
     cmd = {

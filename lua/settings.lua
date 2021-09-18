@@ -10,6 +10,7 @@ o.syntax = 'on'
 
 -- Searching
 o.hlsearch = false
+o.ignorecase = true
 o.infercase = true
 
 -- Mouse/Cursor
@@ -31,7 +32,7 @@ o.encoding = 'utf-8'
 o.fileencoding = 'utf-8'
 
 -- Tabs
-b.tabstop = 4
+cmd[[set tabstop=4]]
 cmd[[set shiftwidth=4]]
 b.expandtab = true
 o.smarttab = true
@@ -47,7 +48,6 @@ o.clipboard = 'unnamedplus'
 cmd[[set formatoptions-=cro]]
 cmd "set iskeyword-=_"
 cmd('colorscheme tokyodark')
--- cmd[[highlight NvimTreeFolderName guifg=purple]]
 
 w.number = true
 w.relativenumber = true

@@ -1,3 +1,4 @@
+vim.g.mapleader = " "
 -- window movement
 vim.api.nvim_set_keymap('n', '<C-J>', '<C-W><C-J>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-K>', '<C-W><C-K>', { noremap = true, silent = true })
@@ -5,7 +6,8 @@ vim.api.nvim_set_keymap('n', '<C-L>', '<C-W><C-L>', { noremap = true, silent = t
 vim.api.nvim_set_keymap('n', '<c-H>', '<C-W><C-H>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Tab>', ':BufferLineCycleNext<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', { noremap = true, silent= true })
-vim.api.nvim_set_keymap('n', '<C-w>', ':bd<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-w>', ':bd!<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'ZZ', ':execute "NvimTreeClose" | :wq!<CR>', { noremap = true, silent = true })
 
 -- better indenting
 vim.api.nvim_set_keymap("v", "<", "<gv", { noremap = true, silent = true })
@@ -52,3 +54,4 @@ vim.api.nvim_set_keymap('n', '<Leader>z', ':ZenMode<CR>', { noremap = true, sile
 
 -- html (poor man's snippets xd)
 vim.api.nvim_set_keymap('n', '<Leader>;;','i<!DOCTYPE html><CR><html><CR><BS><head><CR><title></title><CR><meta charset=\"utf-8\"><CR><link rel=\"shortcut icon\" href=\"\" type=\"image/x-icon\"><CR><link rel=\"stylesheet\" href=\"style.css\"><CR></head><CR><body><CR><header><CR></header><CR><main><CR><div class=\"main\"><CR><h1></h1><CR></div><CR></main><CR><footer><CR></footer><CR></body><CR></html>4Gwli',{ noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>;l','i<!DOCTYPE html><CR><html><CR><BS><head><CR><title></title><CR><meta charset=\"utf-8\"><CR><link rel=\"shortcut icon\" href=\"../../assets/garfield.png\" type=\"image/x-icon\"><CR><link rel=\"stylesheet\" href=\"../../style.css\"><CR></head><CR><body><CR><header><CR></header><CR><main><CR><div class=\"main\"><CR><h1></h1><CR></div><CR><div class=\"sidenav\"><CR><a href=\"https://educhav.xyz/\">Home</a><CR><BS><BS><br><br><CR><a href=\"https://educhav.xyz/blog/\">Blog</a><CR></div><CR></main><CR><footer><CR></footer><CR></body><CR></html>4Gwli',{ noremap = true, silent = true })
